@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Header Style */
+
+.header-container {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    background-color: #FFF;
+    border: 1px solid #EEE;
+    padding: 18px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.nav-container h1 a {
+    text-decoration: none;
+    font-size: 21px;
+    color: #0A1128;
+    text-transform: uppercase;
+}
+
+.nav-container ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-container ul li a {
+    text-decoration: none;
+    position: relative;
+    font-size: 19px;
+    color: #000;
+    transition: 0.2s ease-in-out;
+}
+
+.nav-container ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -12.5px;
+    left: 50%;
+    width: 0;
+    height: 2.5px;
+    background: #dc143c;
+    transition: 0.4s ease-in-out;
+}
+
+.nav-container ul li a:hover::after {
+    left: 0;
+    width: 100%;
+}
+
+.nav-container ul li a:hover {
+    color: #dc143c;
+}
+
+/* Main Style */
+
+.section-container {
+    position: relative;
+    top: 69px;
+    min-height: 100vh;
+    padding: 62.5px 0;
+}
+
+.article-container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+h2.title {
+    text-transform: uppercase;
+    font-size: 58px;
+    padding: 35px 0;
+}
+
+.blue-title {
+    color: #0A1128;
+}
+
+/* Section - Start */
+
+#start {
+    background-image: url(../img/main-bg.svg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 85px;
+}
+
+#start article {
+    display: flex;
+    align-items: center;
+    color: #FFF;
+}
+
+#start h2 {
+    text-transform: uppercase;
+    font-size: 58px;
+    padding-bottom: 40px;
+}
+
+#start p {
+    width: 92.5%;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+#start img {
+    position: relative;
+    width: 57.5%;
+    top: 25px;
+}
+
+/* Section - Intro & Pricing */
+
+#intro article,
+#pricing article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 45%;
+    margin: 0 auto;
+}
+
+#intro p,
+#pricing p,
+#pricing table,
+#gallery p,
+.grid p {
+    font-size: 20px;
+    line-height: 30px;
+    padding-bottom: 25px;
+}
+
+#pricing table {
+    border-collapse: collapse;
+    text-align: left;
+}
+
+#pricing table caption {
+    text-align: left;
+    color: #0A1128;
+    padding: 42.5px 0 15px 0;
+}
+
+#pricing table th,
+#pricing table td {
+    border: 2px solid #EEE;
+    padding: 10px;
+}
+
+#pricing table th,
+#pricing table tfoot td {
+    background-color: #EEE;
+}
+
+#pricing table tfoot td {
+    text-align: right;
+}
+
+/* Section - Grids */
+
+.grid {
+    color: #FFF;
+    background-image: url(../img/main-bg.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+.grid h2 {
+    color: #FFF;
+}
+
+.grid ol {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 35px;
+}
+
+.article-grid span {
+    display: inline-block;
+    position: relative;
+    top: 12.5px;
+    font-size: 75px;
+    transform: rotate(15deg);
+    transition: 0.35s ease-in-out;
+}
+
+.article-grid h3 {
+    display: inline-block;
+    font-size: 35px;
+    padding: 0 0 15px 15px;
+    transition: 0.35s ease-in-out;
+}
+
+.article-grid p {
+    padding: 15px;
+    transition: 0.35s ease-in-out;
+}
+
+.article-grid span:hover {
+    transform: rotate(0deg);
+}
+
+.article-grid span:hover + h3 {
+    padding-left: 20px;
+    letter-spacing: 2px;
+}
+
+.article-grid span:hover + h3 + p {
+    background-color: #00000040;
+}
+
+/* Section - Gallery */
+
+#gallery ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
+    margin-top: 15px;
+}
+
+#gallery ul li {
+    width: 360px;
+    height: 360px;
+    margin: 0 auto;
+    padding-right: 15px;
+}
+
+#gallery li img {
+    width: 100%;
+    transition: 0.4s ease-in-out;
+}
+
+#gallery li img:hover {
+    transform: scale(1.075);
+}
+
+/* Section - Contact */
+
+#contact {
+    background-color: #0A1128;
+    color: #FFF;
+}
+
+#contact h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 58px;
+    padding: 35px 0;
+}
+
+#contact form fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+    font-size: 20px;
+}
+
+#contact form legend {
+    padding: 30px 0 60px 0;
+}
+
+#contact form .input-box {
+    width: 33.33%;
+    padding: 0 30px 30px 0;
+}
+
+#contact form .input-message {
+    width: 100%;
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    outline: none;
+    border: none;
+    font-family: monospace;
+    font-size: 30px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+#contact form input::placeholder,
+#contact form textarea::placeholder {
+    color: #cacaca;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+    box-shadow: 1px 1px 10px 0 #dc143c, -1px -1px 10px 0 #dc143c;
+}
+
+#contact form input:focus::placeholder,
+#contact form textarea:focus::placeholder {
+    color: #dc143c98;
+}
+
+#contact form input[type="submit"] {
+    width: 70%;
+    background-color: transparent;
+    border: 5px solid #FFF;
+    color: #FFF;
+    transition: 0.3s ease-in-out;
+}
+
+#contact form input[type="submit"]:hover {
+    background-color: #FFF;
+    color: #0A1128;
+}
+
+/* Footer Style */
+
+.footer-container {
+    position: relative;
+    z-index: 1;
+    top: 69px;
+    background-color: #FFF;
+    text-align: center;
+    font-size: 17.5px;
+    padding: 45px 0;
+}
+
+.footer-container a {
+    text-decoration: none;
+    color: #a5a5a5;
+    transition: 0.1s ease-in-out;
+}
+
+.footer-container a:hover {
+    color: #dc143c;
+}
+
+/* Back-to-top Button */
+
+.back-to-top {
+    position: fixed;
+    z-index: 1;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #0A1128;
+    border-radius: 50%;
+    background-color: #FFF;
+    color: #0A1128;
+    text-decoration: none;
+}
+
+.back-to-top span {
+    display: block;
+    position: relative;
+    top: 5px;
+    right: 1px;
+    transform: rotate(-90deg);
+    font-size: 25px;
+    transition: 0.2s ease-in-out;
+}
