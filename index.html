@@ -13,10 +13,14 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
     </head>
     <body>
+        <input id="close-menu" type="checkbox" aria-label="Close menu" role="button">
+        <label id="close-menu-label" for="close-menu" title="Close menu"></label>
         <header class="header-container">
             <nav class="nav-container">
-                <h1><a class="title" href="#start">Logo</a></h1>
-                <ul>
+                <h1 onclick="getElementById('close-menu').checked = false;">
+                    <a class="title" href="#start">Logo</a>
+                </h1>
+                <ul onclick="getElementById('close-menu').checked = false;">
                     <li><a href="#intro">Intro</a></li>
                     <li><a href="#grid-one">Grid-one</a></li>
                     <li><a href="#gallery">Gallery</a></li>
@@ -103,7 +107,7 @@
             </section>
             <section id="gallery" class="section-container">
                 <article class="article-container">
-                    <h2 class="title blue-title">Photography</h2>
+                    <h2 class="title blue-title">Photos</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos optio, aliquam adipisci cumque fugiat corrupti iusto
                         id, sint rem minus, iste delectus fugit eius recusandae odit vero ab? Accusantium, ducimus.
