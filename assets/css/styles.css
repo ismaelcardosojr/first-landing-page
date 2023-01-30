@@ -1,5 +1,5 @@
 :root {
-    --prominent-color: #0A1128;
+    --prominent-color: #000724;
     --complementary-color: #dc143c;
     --white-color: #FFF;
 }
@@ -34,9 +34,7 @@ footer p {
 }
 
 .main-bg {
-    background-image: url(../img/main-bg.svg);
-    background-size: cover;
-    background-position: center center;
+    background-color: var(--prominent-color);
 }
 
 /* Header Style */
@@ -277,10 +275,6 @@ h2.title {
     color: var(--white-color);
 }
 
-#contact.main-bg {
-    background-position: -444rem -12rem;
-}
-
 #contact h2 {
     text-align: center;
 }
@@ -312,7 +306,7 @@ h2.title {
     outline: none;
     border: none;
     font-family: monospace;
-    font-size: 30rem;
+    font-size: 22.5rem;
     padding: 15rem 20rem;
     margin-top: 10rem;
 }
@@ -336,7 +330,7 @@ h2.title {
     background-color: transparent;
     border: 5rem solid var(--white-color);
     color: var(--white-color);
-    font-size: 30rem;
+    font-size: 27.5rem;
     padding: 15rem 20rem;
     transition: 0.3s ease-in-out;
 }
@@ -445,11 +439,6 @@ h2.title {
         margin: 0 auto;
     }
 
-    #contact form input,
-    #contact form textarea {
-        font-size: 27.5rem;
-    }
-
     /* Menu Style */
 
     .header-container {
@@ -463,8 +452,8 @@ h2.title {
         z-index: 3;
         top: 20rem;
         right: 20rem;
-        width: 45rem;
-        height: 45rem;
+        width: 40rem;
+        height: 40rem;
         font-size: 30rem;
         display: flex;
         justify-content: center;
