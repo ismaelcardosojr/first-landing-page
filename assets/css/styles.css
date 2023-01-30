@@ -1,16 +1,42 @@
+:root {
+    --prominent-color: #0A1128;
+    --complementary-color: #dc143c;
+    --white-color: #FFF;
+}
+
+html {
+    font-size: 6.25%;
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
 }
 
-html {
-    scroll-behavior: smooth;
+body {
+    font-family: 'Open Sans', sans-serif;
 }
 
 .title {
     font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-container,
+.article-container,
+footer p {
+    padding: 0 30rem;
+}
+
+.main-bg {
+    background-image: url(../img/main-bg.svg);
+    background-size: cover;
+    background-position: center center;
 }
 
 /* Header Style */
@@ -20,37 +46,35 @@ html {
     z-index: 1;
     left: 0;
     right: 0;
-    background-color: #FFF;
-    border: 1px solid #EEE;
-    padding: 18px 0;
+    background-color: var(--white-color);
+    border: 2rem solid #EEE;
+    padding: 18rem 0;
 }
 
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 85%;
+    max-width: 1200rem;
     margin: 0 auto;
 }
 
 .nav-container h1 a {
-    text-decoration: none;
-    font-size: 21px;
-    color: #0A1128;
+    font-size: 24rem;
+    color: var(--prominent-color);
     text-transform: uppercase;
 }
 
 .nav-container ul {
     display: flex;
     list-style: none;
-    gap: 40px;
+    gap: 40rem;
 }
 
 .nav-container ul li a {
-    text-decoration: none;
     text-transform: lowercase;
     position: relative;
-    font-size: 19px;
+    font-size: 19rem;
     color: #000;
     transition: 0.2s ease-in-out;
 }
@@ -58,11 +82,11 @@ html {
 .nav-container ul li a::after {
     content: '';
     position: absolute;
-    bottom: -12.5px;
+    bottom: -12.5rem;
     left: 50%;
     width: 0;
-    height: 2.5px;
-    background: #dc143c;
+    height: 2.5rem;
+    background: var(--complementary-color);
     transition: 0.4s ease-in-out;
 }
 
@@ -72,108 +96,98 @@ html {
 }
 
 .nav-container ul li a:hover {
-    color: #dc143c;
+    color: var(--complementary-color);
 }
 
 /* Main Style */
 
-.section-heading {
-    position: absolute;
-    visibility: hidden;
+.main-container p,
+#pricing table {
+    font-size: 20rem;
+    line-height: 30rem;
+    padding-bottom: 25rem;
 }
 
 .section-container {
     position: relative;
-    top: 69px;
+    top: 69rem;
     min-height: 100vh;
-    padding: 62.5px 0;
+    padding: 60rem 0 100rem 0;
 }
 
 .article-container {
-    width: 85%;
+    max-width: 1200rem;
     margin: 0 auto;
 }
 
-h3.title {
+h2.title {
     text-transform: uppercase;
-    font-size: 58px;
-    padding: 35px 0;
+    font-size: 58rem;
+    padding: 35rem 0;
 }
 
 .blue-title {
-    color: #0A1128;
+    color: var(--prominent-color);
 }
 
 /* Section - Start */
 
 #start {
-    background-image: url(../img/main-bg.svg);
-    background-size: cover;
-    background-position: center;
-    padding-top: 85px;
+    padding-top: 85rem;
 }
 
 #start article {
     display: flex;
     align-items: center;
-    color: #FFF;
+    gap: 30rem;
+    color: var(--white-color);
 }
 
 #start h3 {
     text-transform: uppercase;
-    font-size: 58px;
-    padding-bottom: 40px;
+    font-size: 58rem;
+    padding-bottom: 40rem;
 }
 
 #start p {
-    width: 92.5%;
-    font-size: 20px;
-    line-height: 30px;
+    max-width: 555.5rem;
+    font-size: 20rem;
+    line-height: 30rem;
 }
 
 #start img {
-    position: relative;
-    width: 57.5%;
-    top: 25px;
+    max-width: 57.5%;
 }
 
 /* Section - Intro & Pricing */
 
-#intro article,
-#pricing article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#intro .article-container,
+#pricing .article-container {
+    max-width: 650.5rem;
     text-align: center;
-    width: 45%;
-    margin: 0 auto;
 }
 
-#intro p,
-#pricing p,
-#pricing table,
-#gallery p,
-.grid p {
-    font-size: 20px;
-    line-height: 30px;
-    padding-bottom: 25px;
+#pricing .responsive-table {
+    min-width: 325.25rem;
+    overflow-x: auto;
 }
 
 #pricing table {
     border-collapse: collapse;
     text-align: left;
+    white-space: nowrap;
 }
 
 #pricing table caption {
-    text-align: left;
-    color: #0A1128;
-    padding: 42.5px 0 15px 0;
+    text-align: inherit;
+    color: var(--prominent-color);
+    padding: 42.5rem 0 15rem 0;
 }
 
 #pricing table th,
 #pricing table td {
-    border: 2px solid #EEE;
-    padding: 10px;
+    border: 2rem solid #EEE;
+    padding: 10rem;
 }
 
 #pricing table th,
@@ -185,119 +199,105 @@ h3.title {
     text-align: right;
 }
 
-/* Section - Grids */
+/* Section - Grids & Gallery */
 
-.grid {
-    color: #FFF;
-    background-image: url(../img/main-bg.svg);
-    background-size: cover;
-    background-position: center;
-}
-
-.grid h3 {
-    color: #FFF;
-}
-
-.grid ol {
+.grid-list {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 35px;
+    grid-template-columns: repeat(auto-fill, minmax(360rem, 1fr));
 }
 
-.article-grid span {
-    display: inline-block;
+.grid .grid-list {
+    column-gap: 30rem;
+}
+
+#gallery .grid-list {
+    gap: 30rem;
+    margin-top: 15rem;
+}
+
+.grid {
+    color: var(--white-color);
+    counter-reset: grid-counter;
+}
+
+.grid .article-grid h3::before {
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 70rem;
     position: relative;
-    top: 12.5px;
-    font-size: 75px;
-    transform: rotate(15deg);
-    transition: 0.35s ease-in-out;
-}
-
-.article-grid h4 {
+    top: 12.5rem;
+    right: 15rem;
     display: inline-block;
-    font-size: 35px;
-    padding: 0 0 15px 15px;
+    transform: rotate(10deg);
     transition: 0.35s ease-in-out;
 }
 
-.article-grid p {
-    padding: 15px;
+.grid .article-grid h3 {
+    display: inline-block;
+    font-size: 35rem;
+    padding: 0 0 15rem 15rem;
     transition: 0.35s ease-in-out;
 }
 
-.article-grid span:hover {
+.grid .article-grid p {
+    padding: 15rem;
+    transition: 0.35s ease-in-out;
+}
+
+.grid .article-grid h3:hover {
+    padding-left: 20rem;
+}
+
+.grid .article-grid h3:hover::before {
     transform: rotate(0deg);
+    letter-spacing: 5rem;
 }
 
-.article-grid span:hover + h4 {
-    padding-left: 20px;
-    letter-spacing: 2px;
-}
-
-.article-grid span:hover + h4 + p {
+.grid .article-grid h3:hover + p {
     background-color: #00000040;
 }
 
-/* Section - Gallery */
-
-#gallery ul {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 30px;
-    margin-top: 15px;
-}
-
-#gallery ul li {
-    width: 360px;
-    height: 360px;
-    margin: 0 auto;
-    padding-right: 15px;
-}
-
-#gallery li img {
+#gallery .grid-list img {
     width: 100%;
     transition: 0.4s ease-in-out;
 }
 
-#gallery li img:hover {
-    transform: scale(1.075);
+#gallery .grid-list img:hover {
+    transform: scale(1.05);
 }
 
 /* Section - Contact */
 
 #contact {
-    background-color: #0A1128;
-    color: #FFF;
+    background-color: var(--prominent-color);
+    color: var(--white-color);
 }
 
-#contact h3 {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 58px;
-    padding: 35px 0;
+#contact.main-bg {
+    background-position: -444rem -12rem;
 }
 
 #contact form fieldset {
+    border: none;
     display: flex;
     flex-wrap: wrap;
-    border: none;
-    font-size: 20px;
+    gap: 30rem;
+    font-size: 20rem;
 }
 
 #contact form legend {
-    padding: 30px 0 60px 0;
+    padding: 30rem 0 60rem 0;
 }
 
 #contact form .input-box {
-    width: 33.33%;
-    padding: 0 30px 30px 0;
+    flex: 1 1 349.95rem;
+    padding-bottom: 30rem;
 }
 
 #contact form .input-message {
-    width: 100%;
+    flex-basis: 100%;
 }
 
 #contact form input,
@@ -306,9 +306,9 @@ h3.title {
     outline: none;
     border: none;
     font-family: monospace;
-    font-size: 30px;
-    padding: 15px;
-    margin-top: 10px;
+    font-size: 30rem;
+    padding: 15rem 20rem;
+    margin-top: 10rem;
 }
 
 #contact form input::placeholder,
@@ -318,7 +318,7 @@ h3.title {
 
 #contact form input:focus,
 #contact form textarea:focus {
-    box-shadow: 1px 1px 10px 0 #dc143c, -1px -1px 10px 0 #dc143c;
+    box-shadow: 1rem 1rem 10rem 0 var(--complementary-color), -1rem -1rem 10rem 0 var(--complementary-color);
 }
 
 #contact form input:focus::placeholder,
@@ -326,17 +326,18 @@ h3.title {
     color: #dc143c98;
 }
 
-#contact form input[type="submit"] {
-    width: 70%;
+#contact form button {
     background-color: transparent;
-    border: 5px solid #FFF;
-    color: #FFF;
+    border: 5rem solid var(--white-color);
+    color: var(--white-color);
+    font-size: 30rem;
+    padding: 15rem 20rem;
     transition: 0.3s ease-in-out;
 }
 
-#contact form input[type="submit"]:hover {
-    background-color: #FFF;
-    color: #0A1128;
+#contact form button:hover {
+    background-color: var(--white-color);
+    color: var(--prominent-color);
 }
 
 /* Footer Style */
@@ -344,21 +345,20 @@ h3.title {
 .footer-container {
     position: relative;
     z-index: 1;
-    top: 69px;
-    background-color: #FFF;
+    top: 69rem;
+    background-color: var(--white-color);
     text-align: center;
-    font-size: 17.5px;
-    padding: 45px 0;
+    font-size: 17.5rem;
+    padding: 45rem 0;
 }
 
 .footer-container a {
-    text-decoration: none;
     color: #a5a5a5;
     transition: 0.1s ease-in-out;
 }
 
 .footer-container a:hover {
-    color: #dc143c;
+    color: var(--complementary-color);
 }
 
 /* Back-to-top Button */
@@ -369,14 +369,13 @@ h3.title {
     align-items: center;
     position: fixed;
     z-index: 1;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    border: 2px solid #0A1128;
+    bottom: 20rem;
+    right: 20rem;
+    width: 50rem;
+    height: 50rem;
+    border: 2rem solid var(--prominent-color);
     border-radius: 50%;
-    background-color: #FFF;
-    text-decoration: none;
+    background-color: var(--white-color);
 }
 
 .back-to-top img {
