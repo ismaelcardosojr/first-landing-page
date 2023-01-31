@@ -9,7 +9,10 @@ Most of the content I studied is in this project. In **HTML**, some tags/concept
 
 As for **CSS**, these are some of the interesting ones:
 
-* Grid
-* Flexbox
+* Animations
 * Responsive Design
 * Media Queries
+* Pseudo-elements
+* Pseudo-classes
+* Flexbox
+* Grid
