@@ -13,4 +13,3 @@ As for **CSS**, these are some of the interesting ones:
 * Flexbox
 * Responsive Design
 * Media Queries
-* Variables
